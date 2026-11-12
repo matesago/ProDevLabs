@@ -241,8 +241,10 @@ body { background: #fff; color: var(--color-dark); }
 .rd-cap::after { background: linear-gradient(180deg, rgba(46,45,60,.05) 10%, rgba(46,45,60,.95) 90%); }
 
 /* ---------- Selector de idioma ES / EN ---------- */
-.lang-switch { display: inline-flex; border: 1.5px solid rgba(255,255,255,.45); border-radius: 999px; overflow: hidden; }
-.lang-switch button { padding: .3rem .7rem; font-size: .75rem; font-weight: 700; letter-spacing: .04em; color: rgba(255,255,255,.8); background: transparent; cursor: pointer; transition: background .2s, color .2s; }
+.lang-switch { display: inline-flex; gap: 2px; padding: 3px; border: 1.5px solid rgba(255,255,255,.45); border-radius: 999px; }
+.lang-switch-mobile { margin-left: auto; margin-right: .5rem; }
+@media (min-width: 1024px) { .lang-switch-mobile { display: none; } }
+.lang-switch button { border-radius: 999px; padding: .3rem .75rem; font-size: .75rem; font-weight: 700; letter-spacing: .04em; color: rgba(255,255,255,.8); background: transparent; cursor: pointer; transition: background .2s, color .2s; }
 .lang-switch button:hover { color: var(--color-teal); }
 .lang-switch button.is-active { background-image: var(--brand-gradient); color: #fff; }
 .lang-switch-light { border-color: rgba(46,45,60,.25); }

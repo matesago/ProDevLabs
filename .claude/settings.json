@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "WebFetch(domain:www.endava.com)",
-      "Bash(node --check js/i18n.js)",
-      "Bash(node --check js/main.js)"
-    ]
-  }
-}

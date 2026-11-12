@@ -32,8 +32,8 @@
 
   <link rel="stylesheet" href="css/tailwind.min.css" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/redesign.css" />
+  <link rel="stylesheet" href="css/styles.css?v=2" />
+  <link rel="stylesheet" href="css/redesign.css?v=2" />
 </head>
 
 <body class="font-sans text-dark antialiased">
@@ -64,6 +64,11 @@
           <a href="#contacto" class="rd-btn rd-btn-primary" style="padding:.7rem 1.4rem;font-size:.875rem;">Hablemos</a>
         </div>
 
+        <div class="lang-switch lang-switch-mobile" role="group" aria-label="Cambiar idioma">
+          <button type="button" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
         <button id="menu-toggle" type="button" class="lg:hidden inline-flex items-center justify-center p-2 rounded-md" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú de navegación">
           <svg id="icon-menu" class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
           <svg id="icon-close" class="h-7 w-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -77,12 +82,6 @@
           <li><a href="#porque" class="mobile-nav-link">Por qué elegirnos</a></li>
           <li><a href="#proceso" class="mobile-nav-link">Proceso</a></li>
           <li><a href="#contacto" class="mobile-nav-link">Contacto</a></li>
-          <li class="pt-2 flex justify-center">
-            <div class="lang-switch lang-switch-light" role="group" aria-label="Cambiar idioma">
-              <button type="button" data-lang="es" aria-pressed="true">ES</button>
-              <button type="button" data-lang="en" aria-pressed="false">EN</button>
-            </div>
-          </li>
           <li class="pt-2"><a href="#contacto" class="rd-btn rd-btn-primary" style="display:flex;">Hablemos</a></li>
         </ul>
       </div>
@@ -414,7 +413,7 @@
   <a href="https://wa.me/573163152408" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chatea con nosotros por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.892.526 3.66 1.438 5.168L2 22l4.958-1.396A9.953 9.953 0 0012.001 22C17.524 22 22 17.523 22 12S17.524 2 12.001 2zm0 18.062a8.028 8.028 0 01-4.278-1.24l-.307-.183-3.037.856.826-3.06-.2-.315A8.015 8.015 0 013.938 12c0-4.451 3.612-8.062 8.063-8.062S20.062 7.549 20.062 12 16.452 20.062 12.001 20.062z"></path></svg></a>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/i18n.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
 </body>
 </html>
