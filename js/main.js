@@ -170,19 +170,22 @@
     feedback.style.color = type === "error" ? "#FCA5A5" : "#3ECFBF";
   }
 
+  // Mensajes traducibles (ES/EN) provistos por i18n.js
+  const t = (key) => (window.I18N ? window.I18N.t(key) : key);
+
   function validateForm(data) {
     if (!data.nombre || data.nombre.trim().length < 2) {
-      return "Por favor ingresa tu nombre completo.";
+      return t("name");
     }
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!data.email || !emailPattern.test(data.email)) {
-      return "Por favor ingresa un correo electrónico válido.";
+      return t("email");
     }
     if (!data.servicio) {
-      return "Por favor selecciona un servicio de interés.";
+      return t("service");
     }
     if (!data.mensaje || data.mensaje.trim().length < 10) {
-      return "Cuéntanos un poco más en el mensaje (mínimo 10 caracteres).";
+      return t("message");
     }
     return null;
   }
@@ -216,7 +219,7 @@
       }
 
       submitBtn.disabled = true;
-      submitText.textContent = "Enviando...";
+      submitText.textContent = t("sending");
       setFeedback("", "info");
 
       try {
@@ -234,25 +237,17 @@
         }
 
         if (response.ok) {
-          setFeedback(
-            result.message || "¡Gracias! Tu mensaje fue enviado. Te contactaremos pronto.",
-            "success"
-          );
+          // Se usa el mensaje local (traducido); el del backend está solo en español
+          setFeedback(t("ok"), "success");
           form.reset();
         } else {
-          setFeedback(
-            result.message || "Ocurrió un error al enviar tu mensaje. Intenta nuevamente.",
-            "error"
-          );
+          setFeedback(t("fail"), "error");
         }
       } catch (error) {
-        setFeedback(
-          "No pudimos conectar con el servidor. Verifica tu conexión e intenta de nuevo.",
-          "error"
-        );
+        setFeedback(t("network"), "error");
       } finally {
         submitBtn.disabled = false;
-        submitText.textContent = "Enviar mensaje";
+        submitText.textContent = t("send");
       }
     });
   }
